@@ -83,7 +83,7 @@ class SliderRose {
       const sliderAngle = radians(i * 20);
       const x2 = cos(sliderAngle) * roseRadius;
       const y2 = sin(sliderAngle) * roseRadius;
-      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 + 900);
+      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 + 1050);
       this.sliders[i].style('transform', 'rotate(' + (i * 20 + frameCount * rotationSpeed) + 'deg)');
     }
 
@@ -99,7 +99,7 @@ class SliderRose {
       const sliderAngle = radians(i * 20);
       const x2 = cos(sliderAngle) * roseRadius;
       const y2 = sin(sliderAngle) * roseRadius;
-      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 - 900);
+      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 - 1050);
     }
   }
 }
