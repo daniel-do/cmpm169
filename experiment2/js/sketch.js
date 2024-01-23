@@ -6,13 +6,19 @@
 let sliders;
 let roseRadius;
 let rotationSpeed;
+let canvasContainer;
 
 function setup() {
-  // Create canvas with the size of the window
-  createCanvas(windowWidth, windowHeight);
+  canvasContainer = $("#canvas-container");
+  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+  canvas.parent("canvas-container");
+
+  $(window).resize(function () {
+    resizeCanvas(canvasContainer.width(), canvasContainer.height());
+  });
   
   // Initialize variables
-  sliders = [new SliderRose(width / 2, height / 2)]; // Create an array with a new SliderRose at the center
+  sliders = [new SliderRose(canvasContainer.width() / 2, canvasContainer.height() / 2)]; // Create an array with a new SliderRose at the center
   rotationSpeed = 1; // Set the initial rotation speed
   roseRadius = random(60, 200); // Set the initial rose radius
   background(random(0, 255), random(0, 255), random(0, 255)); // Set a random background color
@@ -77,7 +83,7 @@ class SliderRose {
       const sliderAngle = radians(i * 20);
       const x2 = cos(sliderAngle) * roseRadius;
       const y2 = sin(sliderAngle) * roseRadius;
-      this.sliders[i].position(this.x1 + x2, this.y1 + y2);
+      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 + 900);
       this.sliders[i].style('transform', 'rotate(' + (i * 20 + frameCount * rotationSpeed) + 'deg)');
     }
 
@@ -93,7 +99,7 @@ class SliderRose {
       const sliderAngle = radians(i * 20);
       const x2 = cos(sliderAngle) * roseRadius;
       const y2 = sin(sliderAngle) * roseRadius;
-      this.sliders[i].position(this.x1 + x2, this.y1 + y2);
+      this.sliders[i].position(this.x1 + x2 + 50, this.y1 + y2 - 900);
     }
   }
 }
