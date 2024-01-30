@@ -1,67 +1,71 @@
-// sketch.js - purpose and description here
-// Author: Your Name
-// Date:
+var tileCount = 10;
 
-// Here is how you might set up an OOP p5.js project
-// Note that p5.js looks for a file called sketch.js
+var tileWidth;
+var tileHeight;
+var shapeSize = 100;
+var newShapeSize = shapeSize;
+var shapeAngle = 0;
+var maxDist;
+var currentShape;
+var shapes;
+var canvasContainer;
 
-// Constants - User-servicable parts
-// In a longer project I like to put these in a separate file
-const VALUE1 = 1;
-const VALUE2 = 2;
+var sizeMode = 0;
 
-// Globals
-let myInstance;
-let canvasContainer;
-
-class MyClass {
-    constructor(param1, param2) {
-        this.property1 = param1;
-        this.property2 = param2;
-    }
-
-    myMethod() {
-        // code to run when method is called
-    }
+function preload() {
+  shapes = [];
+  shapes.push(loadImage('../img/Fish1.png'));
 }
 
-// setup() function is called once when the program starts
 function setup() {
-    // place our canvas, making it fit our container
-    canvasContainer = $("#canvas-container");
-    let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
-    canvas.parent("canvas-container");
-    // resize canvas is the page is resized
-    $(window).resize(function() {
-        console.log("Resizing...");
-        resizeCanvas(canvasContainer.width(), canvasContainer.height());
-    });
-    // create an instance of the class
-    myInstance = new MyClass(VALUE1, VALUE2);
+  canvasContainer = $("#canvas-container");
+  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+  canvas.parent("canvas-container");
 
-    var centerHorz = windowWidth / 2;
-    var centerVert = windowHeight / 2;
+  $(window).resize(function () {
+    resizeCanvas(canvasContainer.width(), canvasContainer.height());
+  });
+  imageMode(CENTER);
+  // set the current shape to the first in the array
+  currentShape = shapes[0];
+  tileWidth = width / tileCount;
+  tileHeight = height / tileCount;
+  maxDist = sqrt(pow(width, 2) + pow(height, 2));
 }
 
-// draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    background(220);    
-    // call a method on the instance
-    myInstance.myMethod();
-
-    // Put drawings here
-    var centerHorz = canvasContainer.width() / 2 - 125;
-    var centerVert = canvasContainer.height() / 2 - 125;
-    fill(234, 31, 81);
-    noStroke();
-    rect(centerHorz, centerVert, 250, 250);
-    fill(255);
-    textStyle(BOLD);
-    textSize(140);
-    text("p5*", centerHorz + 10, centerVert + 200);
-}
-
-// mousePressed() function is called once after every time a mouse button is pressed
-function mousePressed() {
-    // code to run when mouse is pressed
-}
+    clear();
+    background('#009dc4');
+  
+    for (var gridY = 0; gridY < tileCount; gridY++) {
+      for (var gridX = 0; gridX < tileCount; gridX++) {
+  
+        var posX = tileWidth * gridX + tileWidth / 2;
+        var posY = tileHeight * gridY + tileWidth / 2;
+  
+        // calculate angle between mouse position and actual position of the shape
+        var angle = atan2(mouseY - posY, mouseX - posX) + (shapeAngle * (PI / 180));
+  
+        // calculate distance between mouse and shape
+        var distance = dist(mouseX, mouseY, posX, posY);
+  
+        // calculate movement speed based on distance
+        var speed = 100;
+  
+        // update position towards mouse
+        posX += cos(angle) * speed;
+        posY += sin(angle) * speed;
+  
+        if (sizeMode == 0) newShapeSize = shapeSize;
+        if (sizeMode == 1) newShapeSize = shapeSize * 1.5 - map(distance, 0, 500, 5, shapeSize);
+        if (sizeMode == 2) newShapeSize = map(distance, 0, 500, 5, shapeSize);
+  
+        push();
+        translate(posX, posY);
+        rotate(angle);
+        noStroke();
+        image(currentShape, 0, 0, newShapeSize, newShapeSize);
+        pop();
+      }
+    }
+  }
