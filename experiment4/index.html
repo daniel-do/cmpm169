@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 4 - Images, Video, & Sound Art</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -17,6 +17,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 	<!-- Load p5.js library -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
 
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
 	<!-- Use me for a JavaScript OOP Project -->
@@ -28,33 +29,24 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 4 - Images, Video, & Sound Art</h1>
 			<div class="minor-section">
 				<h2>Imitate</h2>
-				<p>To develop artistic creativity in coding, it can be helpful to start by studying and learning from existing examples. This might involve reviewing code written by others, analyzing successful techniques, or even copying and modifying code to better understand how it works. By imitating and learning from existing techniques and strategies, we can gain a better understanding of what has been done before and what is possible, and identify opportunities for improvement and innovation.</p>
-				<p>What code did you start with? (You don't need to provide the code itself, but where did you start?) Document this step briefly.</p>
+				<p>I was inspired by the <a href="http://www.generative-gestaltung.de/2/sketches/?02_M/M_1_1_01">M_1_1_01 </a>generative design.</p> I wanted to create a starry-like atmosphere with strings representing guitar strings as if a person were stargazing and soothingly playing music.
 			</div>
-
 			<div class="minor-section">
 				<h2>Integrate</h2>
-				<p>After learning from existing techniques and strategies, we can build upon that foundation by combining elements from different sources. This might involve combining elements from different programming languages, using libraries or frameworks in new ways, or bringing together techniques from different fields or disciplines. By integrating and combining elements from different sources, we can create something new and unique.</p>
-				<p>How did you extend the code or combine with another technique to make something new? Document this step.</p>
+				<p>I integrated two techniques to create a unique visual experience. The first technique involves generating visuals based on audio input, where the volume and pitch of the music influence the movement of strings on a guitar. This aspect brings dynamism to the scene, with strings responding to the rhythm and intensity of the audio. The second technique introduces a celestial backdrop represented by a starry sky, with a prominent star symbolizing the presence of guitar strings amidst the cosmos. This combination creates a harmonious blend between music and the universe, transforming sound into a visual spectacle that resonates with both the auditory and visual senses. As the music plays, the strings dance across the canvas, synchronizing with the twinkling stars above, offering a multisensory experience that evokes a sense of wonder and immersion in the cosmic symphony of sound and light.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Innovate</h2>
-				<p>Finally, we can introduce new or original ideas to our coding process by thinking creatively and pushing the boundaries. This might involve developing entirely new techniques or approaches, or using existing techniques in new and creative ways. By innovating and introducing new ideas, we can create art that is truly groundbreaking.</p>
-				<p>How did you use the code as a jumping off point to create something truly unique and novel? Document this step thoroughly.</p>
+				<p>As I explore this code, I see it as a jumping-off point to craft something truly distinctive and inventive. By blending the visualization of audio data with celestial imagery, I can imagine expanding upon this foundation to create an immersive audio-visual experience unlike any other. Perhaps I could experiment with different visual representations for the audio input, such as incorporating more complex shapes or patterns that evolve dynamically with the music. Additionally, I could explore integrating interactive elements that allow users to influence the visuals in real-time, adding a layer of engagement and personalization to the experience. Furthermore, I might consider experimenting with various visual effects and transitions to enhance the overall aesthetic appeal and create a captivating journey through sound and space. Overall, this code provides a solid framework from which I can unleash my creativity and push the boundaries of what is possible in audio-visual exploration, ultimately resulting in something truly unique and novel.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment. Here's where you can put your reflections.</p>
-				<ul>
-					<li>What part of the project you contributed</li>
-					<li>A reflection on your work and the work of the team</li>
-					<li>Brief highs and lows</li>
-				</ul>
+				<p>As I reflect on creating this interactive art piece, I've encountered both highs and lows throughout the process. One of the highs was the excitement of seeing the visual elements come together and synchronize with the audio input. It was rewarding to witness the strings responding to the music, creating a dynamic and immersive experience for the viewer. Additionally, experimenting with different parameters and visual effects allowed me to unleash my creativity and explore new possibilities. However, there were also lows, such as grappling with technical challenges and debugging issues that arose along the way. At times, it felt frustrating when things didn't work as expected, leading to setbacks and moments of uncertainty. Despite these challenges, persevering through the lows ultimately led to breakthroughs and a deeper understanding of the code and its potential. Overall, creating this interactive art piece has been a journey filled with highs and lows, but the end result is a testament to the creative process and the satisfaction of bringing an idea to life through code.</p>
 			</div>
 
 			<div class="minor-section">
@@ -62,10 +54,14 @@
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
+				<p>Press RETURN to start the music show!</p>
 			</div>
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
 		</nav>
 	</main>
 </body>
