@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 5 - 3D Graphics</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -28,33 +28,35 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 5 - 3D Graphics</h1>
 			<div class="minor-section">
 				<h2>Imitate</h2>
-				<p>To develop artistic creativity in coding, it can be helpful to start by studying and learning from existing examples. This might involve reviewing code written by others, analyzing successful techniques, or even copying and modifying code to better understand how it works. By imitating and learning from existing techniques and strategies, we can gain a better understanding of what has been done before and what is possible, and identify opportunities for improvement and innovation.</p>
-				<p>What code did you start with? (You don't need to provide the code itself, but where did you start?) Document this step briefly.</p>
+				<p>I was not inspired by a particular, existing 3D design. Instead, I ran with the idea of making a snowglobe as winter is coming to an end.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Integrate</h2>
-				<p>After learning from existing techniques and strategies, we can build upon that foundation by combining elements from different sources. This might involve combining elements from different programming languages, using libraries or frameworks in new ways, or bringing together techniques from different fields or disciplines. By integrating and combining elements from different sources, we can create something new and unique.</p>
-				<p>How did you extend the code or combine with another technique to make something new? Document this step.</p>
+				<p>In this design, I've created an interactive scene where different elements come together to create a wintery environment. The key components include a snow globe that can be rotated using mouse interaction, snowflakes falling inside the globe, a snowman standing within the globe, and a circle of trees surrounding the globe on the outside.</p>
+				<p>The integration of these elements is achieved through a combination of object-oriented programming and p5.js functionalities. Each element, such as the snow globe, snowflakes, snowman, and trees, is represented as a separate class with its own properties and behaviors. These classes interact with each other by updating their positions, orientations, and appearances based on user input or predefined rules.</p>
+				<p>For example, when the mouse is pressed, the snow globe and snowman rotate based on the movement of the mouse, while the snowflakes and trees adjust their positions accordingly to maintain their relative positions to the globe. Additionally, the scene is dynamic, with new snowflakes being created periodically to simulate continuous snowfall.</p>
+				<p>Overall, by combining these different elements and techniques, I've created an engaging and interactive scene that brings together various elements of a winter landscape, allowing users to explore and interact with the scene in a visually appealing way.</p>
+				<img class="snowglobe" style="height: 20%; width: 20%" src="../img/snowglobe.png">
+				<p>Starting off with making basic shapes like a sphere and a cylinder made it easy to implement the rest of the objects as shown in the image above.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Innovate</h2>
-				<p>Finally, we can introduce new or original ideas to our coding process by thinking creatively and pushing the boundaries. This might involve developing entirely new techniques or approaches, or using existing techniques in new and creative ways. By innovating and introducing new ideas, we can create art that is truly groundbreaking.</p>
-				<p>How did you use the code as a jumping off point to create something truly unique and novel? Document this step thoroughly.</p>
+				<p>Starting with this code as a foundation, I envision creating a virtual winter wonderland experience that immerses users in an interactive and magical environment. Building upon the rotating snow globe concept, I would expand the scene to include various interactive elements and storytelling opportunities.</p>
+				<p>One idea is to introduce seasonal activities like ice skating or sledding, where users can control the movements of characters or objects within the scene. These activities could be integrated seamlessly with the existing snowfall dynamics and the ability to rotate the snow globe, offering users a dynamic and engaging experience.</p>					
+				<p>Furthermore, I would explore adding atmospheric effects such as changing weather conditions, like snowstorms or clear skies, to enhance the realism and atmosphere of the scene. Additionally, integrating ambient sound effects, such as the crunch of snow underfoot or the sound of wind whistling through the trees, could further enhance the immersive quality of the experience.</p>					
+				<p>Another direction would be to incorporate a narrative element into the scene, where users can uncover clues or solve puzzles hidden within the winter landscape. This could involve interactions with characters or objects in the scene, leading to the discovery of hidden treasures or the unfolding of a larger story.</p>
+				<p>Overall, by leveraging the foundational elements of the rotating snow globe, including the snowfall, snowman, and surrounding trees, I aim to create a unique and captivating experience that transports users to a magical winter world filled with wonder and adventure.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment. Here's where you can put your reflections.</p>
-				<ul>
-					<li>What part of the project you contributed</li>
-					<li>A reflection on your work and the work of the team</li>
-					<li>Brief highs and lows</li>
-				</ul>
+				<p>Creating this interactive art piece was both challenging and rewarding. One of the highs was seeing the snowflakes falling realistically within the snow globe, adding a dynamic and immersive element to the scene. Experimenting with the rotation of the snow globe and the snowman added another layer of interactivity, allowing users to manipulate the environment and explore different perspectives. Additionally, designing the trees surrounding the snow globe was enjoyable, as it contributed to the winter wonderland atmosphere I wanted to achieve.</p>
+				<p>However, there were also some lows during the creation process. Integrating the mouse interaction for rotating the snow globe and the snowman required careful adjustment to ensure smooth and intuitive control, which took some trial and error to get right. Managing the complexity of the code, especially when dealing with multiple objects interacting in a three-dimensional space, posed a challenge at times and required meticulous debugging to resolve issues with positioning and movement. Overall, while there were obstacles along the way, overcoming them and seeing the final result come together was incredibly satisfying.</p>
 			</div>
 
 			<div class="minor-section">
@@ -62,10 +64,15 @@
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
+				<p>Hold down and drag the mouse button.</p>
+				<p>Press RETURN to reset the scene.</p>
 			</div>
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
 		</nav>
 	</main>
 </body>
