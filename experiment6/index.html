@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 6 - Grammars & Text Art</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -28,33 +28,31 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 6 - Grammars & Text Art</h1>
 			<div class="minor-section">
 				<h2>Imitate</h2>
-				<p>To develop artistic creativity in coding, it can be helpful to start by studying and learning from existing examples. This might involve reviewing code written by others, analyzing successful techniques, or even copying and modifying code to better understand how it works. By imitating and learning from existing techniques and strategies, we can gain a better understanding of what has been done before and what is possible, and identify opportunities for improvement and innovation.</p>
-				<p>What code did you start with? (You don't need to provide the code itself, but where did you start?) Document this step briefly.</p>
+				<p>I was inspired by the <a href="https://openprocessing.org/sketch/637325">Lettersoup</a> generative design. I wanted to create a night sky where users can create their own constellations. The Lettersoup generative design provided great inspiration for my design because of the lines that are formed when connecting two characters.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Integrate</h2>
-				<p>After learning from existing techniques and strategies, we can build upon that foundation by combining elements from different sources. This might involve combining elements from different programming languages, using libraries or frameworks in new ways, or bringing together techniques from different fields or disciplines. By integrating and combining elements from different sources, we can create something new and unique.</p>
-				<p>How did you extend the code or combine with another technique to make something new? Document this step.</p>
+				<p>In this code, I've combined multiple techniques to create an interactive sketch. The main focus is on nodes being drawn when the mouse is clicked and lines connecting the nodes to create constellations. Each star is drawn using a loop to create the outline of a five-pointed star shape, with each line segment filled with random characters chosen from the `letters` array. Additionally, I've integrated the functionality of drawing nodes when the mouse is clicked, allowing the user to interactively populate the canvas with additional elements:</p>
+				<img class="text_drawing" style="height: 20%; width: 20%" src="../img/text_drawing.png">
+				<p>These nodes are then connected by lines to form constellations, adding an element of interconnectedness and complexity to the visual composition:</p>
+				<img class="text_drawing" style="height: 20%; width: 20%" src="../img/connecting_lines.png">
+				<p>Finally, I've implemented a reset feature triggered by the RETURN key, which clears the canvas, resets the fade effect, and sets the rotation angle back to its initial state, providing a way to refresh the sketch and start anew. Together, these techniques combine to create a dynamic and engaging visual experience where users can interact with and explore the evolving constellation of characters on the canvas.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Innovate</h2>
-				<p>Finally, we can introduce new or original ideas to our coding process by thinking creatively and pushing the boundaries. This might involve developing entirely new techniques or approaches, or using existing techniques in new and creative ways. By innovating and introducing new ideas, we can create art that is truly groundbreaking.</p>
-				<p>How did you use the code as a jumping off point to create something truly unique and novel? Document this step thoroughly.</p>
+				<p>As I look at this code, I see a canvas filled with rotating stars composed of random characters, connected by nodes drawn when the mouse is clicked, forming intricate constellations. It's a starting point for something truly unique and novel. By building upon this foundation, I can imagine various possibilities. For example, I could introduce interactive elements that respond to user input, such as changing the shape or color of the stars based on mouse movements or clicks. Additionally, I could incorporate dynamic animations or effects, like trails following the nodes as they move or twinkling stars that react to sound or music. Moreover, I could explore thematic variations, such as creating a celestial-themed game where players navigate through the constellations to reach a goal, or integrating educational components to teach about astronomy and mythology. The combination of rotating stars, interactive nodes, and connecting lines opens up a world of creative opportunities to explore and expand upon, allowing me to craft something truly unique and engaging.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment. Here's where you can put your reflections.</p>
-				<ul>
-					<li>What part of the project you contributed</li>
-					<li>A reflection on your work and the work of the team</li>
-					<li>Brief highs and lows</li>
-				</ul>
+				<p>As I reflect on the process of creating this interactive art piece, I find that there were both highs and lows along the way. One of the highs was the excitement of seeing the rotating stars formed using random characters come to life on the canvas. It was satisfying to witness the visual impact of the rotating animation combined with the randomness of the characters, creating a dynamic and engaging composition. Another high was the moment when I successfully implemented the nodes being drawn when the mouse is clicked, adding an interactive element to the artwork. This addition enhanced the user experience and allowed for greater exploration and personalization of the piece.</p>
+				<p>However, there were also lows during the creation process. One of the challenges I faced was fine-tuning the positioning and spacing of the characters within the star shapes. Achieving the desired aesthetic while ensuring that the characters formed recognizable star outlines required experimentation and adjustment. Additionally, managing the complexity of the code as I integrated multiple elements such as the rotating stars, interactive nodes, and connecting lines posed a challenge. Balancing these different components while maintaining code readability and efficiency required careful planning and organization.</p>
+				<p>Overall, despite encountering challenges along the way, the process of creating this interactive art piece was a rewarding experience. It provided opportunities for learning and experimentation while allowing me to explore the intersection of code and creativity in a dynamic and engaging way.</p>
 			</div>
 
 			<div class="minor-section">
@@ -62,10 +60,15 @@
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
+				<p>Click or hold down and drag the mouse button to draw points of a constellation!</p>
+				<p>Press RETURN to reset night sky.</p>
 			</div>
 		</section>
 		<nav id="links">
 			<!-- Put links to other pages (including the homepage) here. -->
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
 		</nav>
 	</main>
 </body>
